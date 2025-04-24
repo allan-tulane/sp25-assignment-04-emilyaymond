@@ -1,14 +1,14 @@
 # CMPS 2200 Assignment 5
 ## Answers
 
-**Name:**_________________________
+**Name:** Emily Aymond
 
 
 
 
 
 
-- **1a.**
+- **1a.** The maxium depth is log_d n
 
 
 - **1b.**
