@@ -3,11 +3,6 @@
 
 **Name:** Emily Aymond
 
-
-
-
-
-
 - **1a.** The maxium depth is log_d n.
 
 
@@ -20,17 +15,31 @@
 - **1d.** The value of d that yields an overall running time of O(|E|) is d = |E|/|V|.
 
 
-- **2a.** 
+- **2a.**
+- APSP(i,j,0)
+-   APSP(0,0,0) = 0  APSP(0,1,0) = -2  APSP(0,2,0) = 2
+-   APSP(1,0,0) = ∞  APSP(1,1,0) = 0  APSP(1,2,0) = 0
+-   APSP(2,0,0) = 0  APSP(2,1,0) = 0  APSP(2,2,0) = 0
+
+-   APSP(i,j,1)
+-   APSP(0,0,1) = 0  APSP(0,1,1) = -2  APSP(0,2,1) = -1
+-   APSP(1,0,1) = ∞  APSP(1,1,1) = 0  APSP(1,2,1) = 1
+-   APSP(2,0,1) = ∞  APSP(2,1,1) = ∞  APSP(2,2,1) = 0
+
+-   APSP(i,j,2)
+-   APSP(0,0,2) = 0  APSP(0,1,2) = -2  APSP(0,2,2) = -1
+-   APSP(1,0,2) = ∞  APSP(1,1,2) = 0  APSP(1,2,2) = 1
+-   APSP(2,0,2) = ∞  APSP(2,1,2) = ∞  APSP(2,2,2) = 0
+
+- **2b.** APSP(i,j,2) = min(APSP(i,j,1), APSP(i,2,1) + APSP(2,j,1))
 
 
-- **2b.**
+- **2c.** Generalized version: APSP(i,j,k) = min(APSP(i,j,k-1), APSP(i,k,k-1) + APSP(k,j,k-1)) \
+- The shortest path from i to j is without k or directly through k.
 
+- **2d.** The work is O(n^3) because the subproblems are n * n * n.
 
-- **2c.**
-
-- **2d.**
-
-- **2e.**
+- **2e.** This algorithm works better when the graphs are dense, meaning the number of edges is close to the maximal number of edges.
 
 
 
